@@ -17,7 +17,7 @@ public class JiNianRi {
     /**
      * 生日
      */
-    static String shengRi = "2005-11-7";
+    static String shengRi = "2005-11-07";
 
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
