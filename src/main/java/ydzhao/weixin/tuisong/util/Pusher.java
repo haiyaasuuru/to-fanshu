@@ -17,10 +17,10 @@ public class Pusher {
     /**
      * 测试号的appId和secret
      */
-    private static String appId = "xxx";
-    private static String secret = "6e2a329fd59e83fb87f013cd3a405137";
+    private static String appId = "wx33acc5a84e6d089c";
+    private static String secret = "7e1e68ad734dd002eb6d0a52e77ae86d";
     //模版id
-    private static String templateId = "BmHHbIFsP7SqjebQ5rgDRjBxPtRcDxgrvqyiAojgrh8";
+    private static String templateId = "FUKAMP-Eo96KPa78xZtsbcXbjhXWkcI1K2Vu2NE396I";
 
     public static void push(String openId){
         //1，配置
@@ -48,17 +48,10 @@ public class Pusher {
         templateMessage.addData(new WxMpTemplateData("lianai",JiNianRi.getLianAi()+"","#FF1493"));
         templateMessage.addData(new WxMpTemplateData("shengri",JiNianRi.getShengRi()+"","#FFA500"));
         templateMessage.addData(new WxMpTemplateData("jinju",CaiHongPi.getJinJu()+"","#C71585"));
-        //templateMessage.addData(new WxMpTemplateData("jiehun",JiNianRi.getJieHun()+""));
         templateMessage.addData(new WxMpTemplateData("linzhen",JiNianRi.getLinZhen()+"","#FF6347"));
         String beizhu = "";
-        if(JiNianRi.getJieHun() % 365 == 0){
-            beizhu = "今天是结婚纪念日！";
-        }
         if(JiNianRi.getLianAi() % 365 == 0){
             beizhu = "今天是恋爱纪念日！";
-        }
-        if(JiNianRi.getLinZhen() % 365 == 0){
-            beizhu = "今天是结婚纪念日！";
         }
         templateMessage.addData(new WxMpTemplateData("beizhu",beizhu,"#FF0000"));
 
